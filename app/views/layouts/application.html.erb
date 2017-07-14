@@ -11,14 +11,15 @@
   <div class="container">
     <ul class="nav nav-tabs">
       <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Applications", registered_applications_path %></li>
       <li><%= link_to "About", about_path %></li>
 
       <div class="pull-right user-info">
         <% if current_user %>
-          <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
+          <%= image_tag current_user.avatar_url(40), class: "gravatar" %>
           <div class="pull-right">
-            Welcome <%= current_user.first_name %> <%= current_user.last_name %><br/> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-            &nbsp;&nbsp;<%= link_to "Edit Account", edit_user_registration_path %>
+            Welcome <%= current_user.first_name %> <%= current_user.last_name %><br/> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'signout-link' %>
+            <%= link_to "Edit Account", edit_user_registration_path %>
           </div>
         <% else %>
           <%= link_to "Sign In", new_user_session_path %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :registered_applications
+
   get 'about' =>  'welcome#about'
 
   root 'welcome#index'

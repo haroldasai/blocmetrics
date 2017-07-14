@@ -1,0 +1,11 @@
+<h1><%= @application.name %></h1>
+ 
+<!-- auth -->
+  <%= link_to "Edit Application", edit_registered_application_path, class: 'btn btn-success' %>
+  <%= link_to "Delete Applcation", @application, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this application?' } %> 
+<!-- auth -->
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead"><%= link_to @application.url, @application.url %></p>
+  </div>  
+</div>  
