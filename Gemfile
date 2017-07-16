@@ -43,4 +43,6 @@ gem 'bootstrap-sass'
 gem 'figaro'
 gem 'devise'
 gem 'pundit'
+gem 'chartkick'
+gem 'groupdate'
 
